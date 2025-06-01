@@ -1,6 +1,6 @@
 /*Menyn*/
 .headmenu {list-style-type: none; margin: 0; padding: 1em;} 
-.headmenu > li {display: inline-block; position: relative;}
+.headmenu > li {display: inline-block; position: relative; gap: 3em;}
 .headmenu > li > ul {display: none; position: absolute; top: 100%; list-style-type: none; margin: 0; padding: 0;} 
 .headmenu > li:hover > ul {display: block;} 
 .headmenu a {text-decoration: none;} 
@@ -30,10 +30,53 @@ header, footer{
     }
     .header {
         grid-area: header;
-        padding: 2em;
+        padding: 1em;
         width: 100vw;
+        font-size: x-large;
     }
-    .main {
+    li {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    .main1 {
+        grid-area: main;
+    }
+    .main2 {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+        padding: 2em;
+        font-size: large;
+    }
+}
+@media (max-width:1024px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+    .header {
+        grid-area: header;
+        padding: 1em;
+        width: 100vw;
+        font-size: x-large;
+    }
+    li {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    .main1 {
+        grid-area: main;
+    }
+    .main2 {
         grid-area: main;
     }
     .footer {
@@ -41,9 +84,37 @@ header, footer{
         padding: 2em;
     }
 }
-@media (max-width:1024px) {
-
-}
 @media (max-width: 600px) {
-
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+    .header {
+        grid-area: header;
+        padding: 1em;
+        width: 100vw;
+        font-size: x-large;
+    }
+    li {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    .main1 {
+        grid-area: main;
+    }
+    .main2 {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+        padding: 2em;
+    }
 }
