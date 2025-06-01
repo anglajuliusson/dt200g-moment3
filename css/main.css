@@ -1,0 +1,49 @@
+/*Menyn*/
+.headmenu {list-style-type: none; margin: 0; padding: 1em;} 
+.headmenu > li {display: inline-block; position: relative;}
+.headmenu > li > ul {display: none; position: absolute; top: 100%; list-style-type: none; margin: 0; padding: 0;} 
+.headmenu > li:hover > ul {display: block;} 
+.headmenu a {text-decoration: none;} 
+.headmenu > li:hover {background-color: lightgray;} 
+.headmenu > li > ul > li:hover {background-color:white;} 
+/*Färg för länkarna vid olika tillfällen*/ 
+a:link{color: white;}  
+a:visited{color: white;} 
+a:hover{color: white;} 
+a:active{color: white;} 
+header, footer{
+    background-color: black;
+    color: white;
+}
+@media (min-width: 1025px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+    .header {
+        grid-area: header;
+        padding: 2em;
+        width: 100vw;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+        padding: 2em;
+    }
+}
+@media (max-width:1024px) {
+
+}
+@media (max-width: 600px) {
+
+}
